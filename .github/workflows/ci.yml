@@ -13,6 +13,5 @@ jobs:
         host: ${{ secrets.HOST }}
         username: ${{ secrets.USERNAME }}
         key: ${{ secrets.KEY }}
-    - name: Copy all files to server
-      run: |
-         scp -r -P ${{ secrets.PORT }} ./* /var/www/html/
+        source: "."
+        target: "/var/www/html"
