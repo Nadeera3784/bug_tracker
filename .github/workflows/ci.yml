@@ -13,5 +13,5 @@ jobs:
         host: ${{ secrets.HOST }}
         username: ${{ secrets.USERNAME }}
         key: ${{ secrets.KEY }}
-        script:  cp "README.md" "/test.eduspark.world"
+        script:  cp "README.md" "/var/www/html/"
 
