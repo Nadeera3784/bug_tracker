@@ -13,5 +13,5 @@ jobs:
         host: ${{ secrets.HOST }}
         username: ${{ secrets.USERNAME }}
         key: ${{ secrets.KEY }}
-        script: cp "./task1/" "/var/www/html"
+        script: cp "task1" "/var/www/html"
 
