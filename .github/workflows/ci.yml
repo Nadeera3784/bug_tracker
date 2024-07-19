@@ -9,13 +9,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     
-     - name: Run a multi-line script
+     - name: Create Tarball
        run: |
          mkdir ../build
          cp -TR . ../build
          tar -cvf deploy.tar ../build/
 
-     - name: Copy file via sftp
+     - name: Copy Files To The Server
        uses: appleboy/scp-action@v0.1.7
        with:
           host: ${{ secrets.HOST }}
