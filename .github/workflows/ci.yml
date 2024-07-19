@@ -23,4 +23,15 @@ jobs:
           key: ${{ secrets.KEY }}
           source: "deploy.tar"
           target: "/var/www/html"
-          run: ls
+          run: ls    
+          
+     - name: Deploy The Code
+       uses: appleboy/ssh-action@v0.1.4
+       with:
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.USERNAME }}
+          key: ${{ secrets.KEY }}
+          script: |
+            cd /var/www/html
+            tar -xvf deploy.tar
+            rm deploy.tar
