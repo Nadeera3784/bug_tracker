@@ -8,11 +8,18 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    - uses: appleboy/scp-action@v0.1.7
-      with:
-        host: ${{ secrets.HOST }}
-        username: ${{ secrets.USERNAME }}
-        key: ${{ secrets.KEY }}
-        source: "task1/public/index.php"
-        target: "/var/www/html"
-        strip_components: 1
+    
+     - name: Run a multi-line script
+       run: |
+          mkdir ../build
+          cp -TR . ../build
+          tar -cvf deploy.tar ../build/
+          
+     - name: Copy file via sftp
+       uses: appleboy/scp-action@v0.1.7
+       with:
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.USERNAME }}
+          key: ${{ secrets.KEY }}
+          source: "deploy.tar"
+          target: "/var/www/html"
