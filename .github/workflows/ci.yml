@@ -13,7 +13,7 @@ jobs:
         host: ${{ secrets.HOST }}
         username: ${{ secrets.USERNAME }}
         key: ${{ secrets.KEY }}
-        source: "task1/"
+        source: "/*"
         target: "/var/www/test"
         strip_components: 1
 
