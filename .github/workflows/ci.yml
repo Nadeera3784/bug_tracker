@@ -13,9 +13,9 @@ jobs:
        
      - name: Create Tarball
        run: |
-         mkdir ../build
-         cp -TR ${{ github.workspace }} ../build
-         tar -cvf deploy.tar ../build/
+         mkdir build
+         cp -R . build/
+         tar -cvf deploy.tar build/
          ls
 
      - name: Copy Files To The Server
