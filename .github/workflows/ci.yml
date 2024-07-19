@@ -13,6 +13,7 @@ jobs:
         host: ${{ secrets.HOST }}
         username: ${{ secrets.USERNAME }}
         key: ${{ secrets.KEY }}
-        source: "./*"
-        target: "/home/forge/test.eduspark.world"
+        source: "task1/"
+        target: "/var/www/test"
+        strip_components: 1
 
