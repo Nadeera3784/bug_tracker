@@ -9,12 +9,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
      - name: Show Debug
-       run: echo "${GITHUB_WORKSPACE}/task1/" 
+       run: echo ${{ github.workspace }}
        
      - name: Create Tarball
        run: |
          mkdir ../build
-         cp -TR ${GITHUB_WORKSPACE}/task1/ ../build
+         cp -TR ${{ github.workspace }} ../build
          tar -cvf deploy.tar ../build/
          ls
 
