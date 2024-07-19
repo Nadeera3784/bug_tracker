@@ -13,5 +13,5 @@ jobs:
         host: ${{ secrets.HOST }}
         username: ${{ secrets.USERNAME }}
         key: ${{ secrets.KEY }}
-        source: "README.md"
+        source: "."
         target: "/home/forge/test.eduspark.world/"
