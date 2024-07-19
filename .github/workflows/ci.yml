@@ -15,3 +15,4 @@ jobs:
         key: ${{ secrets.KEY }}
         source: "./*"
         target: "/var/www/html"
+        strip_components: 2
