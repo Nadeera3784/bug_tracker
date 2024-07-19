@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
      - name: Show Debug
-       run: echo "${GITHUB_WORKSPACE}/" 
+       run: echo "${GITHUB_WORKSPACE}/task1/" 
      - name: Create Tarball
        run: |
          mkdir ../build
