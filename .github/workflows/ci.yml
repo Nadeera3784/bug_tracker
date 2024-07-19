@@ -8,15 +8,15 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-     - name: Show Debug
-       run: echo ${{ github.workspace }}
+     - name: Checkout
+       uses: actions/checkout@v3
        
-     - name: Create Tarball
-       run: |
-         mkdir build
-         cp -R . build/
-         tar -cvf deploy.tar build/
-         ls
+     - name: Create Tarball 
+       run: | 
+        mkdir ../build 
+        cp -TR . ../build 
+        tar -cvf deploy.tar ../build/ 
+        ls
 
      - name: Copy Files To The Server
        uses: appleboy/scp-action@v0.1.7
