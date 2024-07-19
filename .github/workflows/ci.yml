@@ -36,4 +36,6 @@ jobs:
           script: |
             cd /var/www/html
             tar -xvf deploy.tar
+            cp build/* /var/www/html/
+            rm -r build/
             rm deploy.tar
