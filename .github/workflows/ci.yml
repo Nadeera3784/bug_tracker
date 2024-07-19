@@ -11,9 +11,9 @@ jobs:
     
      - name: Run a multi-line script
        run: |
-          mkdir ../build
-          cp  . ../build
-          
+          mkdir build
+          cp -r . build/
+
      - name: Copy file via sftp
        uses: appleboy/scp-action@v0.1.7
        with:
