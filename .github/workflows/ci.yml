@@ -11,10 +11,10 @@ jobs:
     
      - name: Create Tarball
        run: |
-         ls
          mkdir ../build
          cp -TR . ../build
          tar -cvf deploy.tar ../build/
+         ls
 
      - name: Copy Files To The Server
        uses: appleboy/scp-action@v0.1.7
