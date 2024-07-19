@@ -10,10 +10,11 @@ jobs:
     steps:
      - name: Show Debug
        run: echo "${GITHUB_WORKSPACE}/task1/" 
+       
      - name: Create Tarball
        run: |
          mkdir ../build
-         cp -TR . ../build
+         cp -TR ${GITHUB_WORKSPACE}/task1/ ../build
          tar -cvf deploy.tar ../build/
          ls
 
