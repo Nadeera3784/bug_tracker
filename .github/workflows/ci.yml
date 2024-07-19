@@ -13,6 +13,7 @@ jobs:
        run: |
          mkdir ../build
          cp -TR . ../build
+         #tar -cvf deploy.tar ../build/
 
      - name: Copy file via sftp
        uses: appleboy/scp-action@v0.1.7
@@ -20,5 +21,5 @@ jobs:
           host: ${{ secrets.HOST }}
           username: ${{ secrets.USERNAME }}
           key: ${{ secrets.KEY }}
-          source: "build/*"
+          source: "../build/*"
           target: "/var/www/html"
